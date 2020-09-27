@@ -1,10 +1,10 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
+<%= form_with(model: @post, local: true) do |form| %>
+  <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %>No se pudo guardar tu post</h2>
+      <h2><%= pluralize(@post.errors.count, "error") %>No se pudo guardar tu post</h2>
 
       <ul>
-      <% post.errors.full_messages.each do |message| %>
+      <% @post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :titulo %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :contenido %>
     <%= form.text_area :content %>
   </div>
 
   <div class="field">
-    <%= form.label :image_url %>
+    <%= form.label :url_de_la_imagen %>
     <%= form.text_area :image_url %>
   </div>
 
