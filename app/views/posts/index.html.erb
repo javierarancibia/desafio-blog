@@ -21,7 +21,8 @@
                   <tr>
                     <td><%= post.title %></td>
                     <td><%= post.content %></td>
-                    <td><%= post.image_url %></td>
+                    <td class="container rounded mx-auto d-block"><%= image_tag post.image_url %></td>
+                    
                     <td><%= post.created_at %></td>
                   </tr>
                 <% end %>
