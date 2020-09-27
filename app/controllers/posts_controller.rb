@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with name: "desafiovamoscontodo", password: "XAHTJEAS23123%23", only: :new 
+
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
